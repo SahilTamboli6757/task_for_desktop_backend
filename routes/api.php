@@ -11,9 +11,13 @@ Route::post('login', [AuthController::class, 'login']);
 
 Route::post('signup', [AuthController::class, 'signup']);
 
-Route::middleware(['auth:sanctum'])->group(function () {
-    Route::resource('tasks',TaskController::class);
+Route::middleware(['auth:api'])->group(function () {
+
+    Route::get('logout', [AuthController::class, 'logout']);
+
+    Route::get('profile', [AuthController::class, 'showProfile']);
+
+    Route::put('profile/update', [AuthController::class, 'updateProfile']);
+
+    Route::resource('tasks', TaskController::class);
 });
-
-
-

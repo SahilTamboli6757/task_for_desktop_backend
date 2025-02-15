@@ -14,7 +14,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks =  Task::all();
+        $tasks =  Task::orderByDesc('updated_at')->get();
 
         return response()->json(["tasks" => $tasks], 200);
     }

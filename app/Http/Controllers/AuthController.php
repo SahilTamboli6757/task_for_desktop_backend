@@ -7,6 +7,7 @@ use App\Http\Requests\ProfileUpdateRequest;
 use App\Http\Requests\SignupRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
 
@@ -49,7 +50,16 @@ class AuthController extends Controller
     {
         $user = User::find(Auth::user()->id);
 
-        $user->update($request->validated());
+        $params = $request->validated();
+
+        if (isset($params["password"])) {
+            $params["password"] = Hash::make($params["password"]);
+        } else {
+            $params["password"] = $user->password;
+        }
+
+
+        $user->update($params);
 
         return response()->json(["message" => "profile update"], 200);
     }
