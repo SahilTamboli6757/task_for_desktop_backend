@@ -6,6 +6,7 @@ use App\Http\Requests\Task\CreateTaskRequest;
 use App\Http\Requests\Task\UpdateTaskReque;
 use App\Models\Task;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class TaskController extends Controller
 {
@@ -14,7 +15,8 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks =  Task::orderByDesc('updated_at')->get();
+        Log::info("user id". Auth::user()->id ."");
+        $tasks =  Task::where('user_id', Auth::user()->id)->orderByDesc('updated_at')->with('user')->get();
 
         return response()->json(["tasks" => $tasks], 200);
     }

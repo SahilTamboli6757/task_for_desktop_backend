@@ -11,7 +11,11 @@ class Task extends Model
     /** @use HasFactory<\Database\Factories\TaskFactory> */
     use HasFactory, SoftDeletes;
 
-    protected $guarded = ['price'];
+    protected $guarded = ['id'];
 
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
