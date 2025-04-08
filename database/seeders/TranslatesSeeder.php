@@ -13,6 +13,8 @@ class TranslatesSeeder extends Seeder
      */
     public function run(): void
     {
+
+
         $components = [
             "signin" => [
                 "en" => [
@@ -28,8 +30,59 @@ class TranslatesSeeder extends Seeder
                         ]
                     ],
                     "button_lable" => "login"
-                ]
-            ]
+                ],
+                "ma" => [],
+                "ha" => [],
+                "ta" => [],
+            ],
+            "signup" => [
+                "ma" => [],
+                "ha" => [],
+                "ta" => [],
+                "en" => [],
+            ],
+            "nav-bar" => [
+                "ma" => [],
+                "ha" => [],
+                "ta" => [],
+                "en" => [],
+            ],
+            "create-task" => [
+                "ma" => [],
+                "ha" => [],
+                "ta" => [],
+                "en" => [],
+            ],
+            "edit-task" => [
+                "ma" => [],
+                "ha" => [],
+                "ta" => [],
+                "en" => [],
+            ],
+            "view-profile" => [
+                "ma" => [],
+                "ha" => [],
+                "ta" => [],
+                "en" => [],
+            ],
+            "profile-update" => [
+                "ma" => [],
+                "ha" => [],
+                "ta" => [],
+                "en" => [],
+            ],
+            "task-info" => [
+                "ma" => [],
+                "ha" => [],
+                "ta" => [],
+                "en" => [],
+            ],
+            "task-show" => [
+                "ma" => [],
+                "ha" => [],
+                "ta" => [],
+                "en" => [],
+            ],
         ];
 
 
