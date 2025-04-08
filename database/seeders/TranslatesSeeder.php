@@ -184,56 +184,120 @@ class TranslatesSeeder extends Seeder
             ],
             "create-task" => [
                 "ma" => [
-                    "title_label" => "शीर्षक",
-                    "title_placeholder" => "कार्याचे शीर्षक प्रविष्ट करा",
-                    "description_label" => "वर्णन",
-                    "description_placeholder" => "कार्याचे वर्णन प्रविष्ट करा",
-                    "button_label" => "सबमिट करा"
+                    'form_title' => 'कार्य तयार करा',
+                    'inputs' => [
+                        'title' => [
+                            'label' => 'शीर्षक',
+                            'placeholder' => 'कार्य शीर्षक प्रविष्ट करा',
+                        ],
+                        'description' => [
+                            'label' => 'वर्णन',
+                            'placeholder' => 'कार्य वर्णन प्रविष्ट करा',
+                        ],
+                    ],
+                    'button_label' => 'सबमिट करा',
 
                 ],
                 "ha" => [
-                    "title_label" => "शीर्षक",
-                    "title_placeholder" => "कार्य का शीर्षक दर्ज करें",
-                    "description_label" => "विवरण",
-                    "description_placeholder" => "कार्य का विवरण दर्ज करें",
-                    "button_label" => "जमा करें"
+                    'form_title' => 'कार्य बनाएँ',
+                    'inputs' => [
+                        'title' => [
+                            'label' => 'शीर्षक',
+                            'placeholder' => 'कार्य शीर्षक दर्ज करें',
+                        ],
+                        'description' => [
+                            'label' => 'विवरण',
+                            'placeholder' => 'कार्य विवरण दर्ज करें',
+                        ],
+                    ],
+                    'button_label' => 'सबमिट करे',
                 ],
 
                 "ta" => [
-                    "title_label" => "தலைப்பு",
-                    "title_placeholder" => "பணியின் தலைப்பை உள்ளிடவும்",
-                    "description_label" => "விளக்கம்",
-                    "description_placeholder" => "பணியின் விளக்கத்தை உள்ளிடவும்",
-                    "button_label" => "சமர்ப்பிக்கவும்"
+                    'form_title' => 'டாஸ்க் உருவாக்கம்',
+                    'inputs' => [
+                        'title' => [
+                            'label' => 'தலைப்பு',
+                            'placeholder' => 'டாஸ்க் தலைப்பை உள்ளிடவும்',
+                        ],
+                        'description' => [
+                            'label' => 'விவரம்',
+                            'placeholder' => 'டாஸ்க் விவரத்தை உள்ளிடவும்',
+                        ],
+                    ],
+                    'button_label' => 'சமர்ப்பிக்கவும்',
                 ],
                 "en" => [
-                    "title_label" => "Title",
-                    "title_placeholder" => "Enter task title",
-                    "description_label" => "Description",
-                    "description_placeholder" => "Enter task description",
-                    "button_label" => "Submit"
+                    'form_title' => 'Create Task',
+                    'inputs' => [
+                        'title' => [
+                            'label' => 'Title',
+                            'placeholder' => 'Enter task title',
+                        ],
+                        'description' => [
+                            'label' => 'Description',
+                            'placeholder' => 'Enter task description',
+                        ],
+                    ],
+                    'button_label' => 'Submit',
                 ],
             ],
             "edit-task" => [
                 "ma" => [
-                    "title_label" => "शीर्षक",
-                    "title_placeholder" => "अपडेट केलेले शीर्षक प्रविष्ट करा",
-                    "button_label" => "अपडेट करा"
+                    'form_title' => 'कार्य संपादित करा',
+                    'inputs' => [
+                        'title' => [
+                            'label' => 'शीर्षक',
+                            'placeholder' => 'सुधारित शीर्षक प्रविष्ट करा',
+                        ],
+                        'description' => [
+                            'label' => 'वर्णन',
+                            'placeholder' => 'सुधारित वर्णन प्रविष्ट करा',
+                        ],
+                    ],
+                    'button_label' => 'अद्यतन करा',
                 ],
                 "ha" => [
-                    "title_label" => "शीर्षक",
-                    "title_placeholder" => "अपडेट किया गया शीर्षक दर्ज करें",
-                    "button_label" => "अपडेट करें"
+                    'form_title' => 'कार्य संपादित करें',
+                    'inputs' => [
+                        'title' => [
+                            'label' => 'शीर्षक',
+                            'placeholder' => 'अद्यतन शीर्षक दर्ज करें',
+                        ],
+                        'description' => [
+                            'label' => 'विवरण',
+                            'placeholder' => 'अद्यतन विवरण दर्ज करें',
+                        ],
+                    ],
+                    'button_label' => 'अपडेट करे',
                 ],
                 "ta" => [
-                    "title_label" => "தலைப்பு",
-                    "title_placeholder" => "புதுப்பிக்கப்பட்ட தலைப்பை உள்ளிடவும்",
-                    "button_label" => "புதுப்பிக்கவும்"
+                    'form_title' => 'டாஸ்க் திருத்தம்',
+                    'inputs' => [
+                        'title' => [
+                            'label' => 'தலைப்பு',
+                            'placeholder' => 'புதிய தலைப்பை உள்ளிடவும்',
+                        ],
+                        'description' => [
+                            'label' => 'விவரம்',
+                            'placeholder' => 'புதிய விவரத்தை உள்ளிடவும்',
+                        ],
+                    ],
+                    'button_label' => 'புதுப்பிக்கவும்',
                 ],
                 "en" => [
-                    "title_label" => "Title",
-                    "title_placeholder" => "Enter updated title",
-                    "button_label" => "Update"
+                    'form_title' => 'Edit Task',
+                    'inputs' => [
+                        'title' => [
+                            'label' => 'Title',
+                            'placeholder' => 'Enter updated title',
+                        ],
+                        'description' => [
+                            'label' => 'Description',
+                            'placeholder' => 'Enter updated description',
+                        ],
+                    ],
+                    'button_label' => 'Update',
                 ],
             ],
             "view-profile" => [
