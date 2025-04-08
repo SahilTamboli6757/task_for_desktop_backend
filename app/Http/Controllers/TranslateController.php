@@ -14,7 +14,7 @@ class TranslateController extends Controller
 
             $translate = Translate::where('component', $request->component)
                 ->where('lang', $request->lang)
-                ->first();
+                ->firstOrFail();
 
             return response()->json(TrnslateResource::make($translate));
         } else {
